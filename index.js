@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const { promisify, format } = require('node:util');
 const { argv } = require('node:process');
 const { exec } = require('node:child_process');
+const path = require('node:path');
 
 const asyncExec = promisify(exec);
 
@@ -39,14 +40,14 @@ function getSaveLogCommand(fileName) {
   const distDir = 'assayo';
   const distPath = process.cwd();
 
-  const source = `${__dirname}\\build`;
-  const build = `${distPath}\\${distDir}`;
+  const source = path.resolve(__dirname, 'build');
+  const build = path.resolve(distPath, distDir);
   const copy = `cp -r ${source} ${build}`;
   await asyncExec(copy);
   log('directory with HTML report was be created');
 
   log('reading git log was be started');
-  const fileName = `./${distDir}/log.txt`;
+  const fileName =  path.resolve('./', distDir, 'log.txt');
   const command = getSaveLogCommand(fileName);
   await asyncExec(command);
   log('the file with git log was be saved');
