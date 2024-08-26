@@ -2,7 +2,7 @@
   "name": "AssayoNpx",
   "version": "0.0.1",
   "scripts": {
-    "local": "npm uninstall -g AssayoNpx && npm i -g"
+    "re-install": "npm uninstall -g AssayoNpx && npm i -g"
   },
   "bin": {
     "assayo": "./index.js"

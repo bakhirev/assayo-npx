@@ -39,6 +39,6 @@ npm run update
 
 ##### Локальная установка
 ```
-npm run local
+npm run re-install
 ```
 
