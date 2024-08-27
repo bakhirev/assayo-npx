@@ -5,10 +5,10 @@
     "re-install": "npm uninstall -g AssayoNpx && npm i -g"
   },
   "bin": {
-    "assayo": "index.js"
+    "assayo": "bin/npx.js"
   },
   "description": "Visualization and analysis of git commit statistics. Team Lead performance tool.",
-  "main": "index.js",
+  "main": "bin/npx.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bakhirev/assayo-npx.git"
@@ -27,7 +27,7 @@
     "achivments"
   ],
   "author": "Aleksei Bakhirev",
-  "license": "ISC",
+  "license": "proprietary",
   "bugs": {
     "url": "https://github.com/bakhirev/assayo/issues"
   },

@@ -1,0 +1,28 @@
+{
+  "name": "bakhirev/assayo",
+  "type": "library",
+  "description": "Visualization and analysis of git commit statistics. Team Lead performance tool.",
+  "keywords": [
+    "git",
+    "stat",
+    "statistic",
+    "statistics",
+    "log",
+    "report",
+    "audit",
+    "data-visualization",
+    "commit",
+    "commits",
+    "achivments"
+  ],
+  "license": "proprietary",
+  "bin": [
+    "bin/assayo"
+  ],
+  "authors": [
+    {
+      "name": "redbits-temp"
+    }
+  ],
+  "homepage": "https://github.com/bakhirev/assayo"
+}

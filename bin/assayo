@@ -1,0 +1,76 @@
+#!/usr/bin/env php
+<?php
+
+// Функция для вывода сообщений, если используется флаг --debug
+function logMessage($message) {
+  global $argv;
+  if (in_array('--debug', $argv)) {
+    echo "Assayo: $message\n";
+  }
+}
+
+// Функция для получения сообщения об ошибке
+function getErrorMessage($error) {
+  if (!is_object($error) || $error === null) {
+    return strval($error);
+  }
+  if (method_exists($error, 'getTraceAsString')) {
+    return $error->getTraceAsString();
+  }
+  return print_r($error, true);
+}
+
+// Функция для обработки фатальных ошибок
+function onFatalError($error) {
+  http_response_code(500);
+  $message = getErrorMessage($error) ?? 'error';
+  fwrite(STDERR, "Assayo: $message\n");
+  exit(2);
+}
+
+// Функция для получения команды сохранения лога git
+function getSaveLogCommand($fileName) {
+  global $argv;
+  $raw = in_array('--no-file', $argv) ? '' : '--raw --numstat';
+  return "git --no-pager log $raw --oneline --all --reverse --date=iso-strict --pretty=format:\"%ad>%aN>%aE>%s\" > $fileName";
+}
+
+try {
+  // folder, when library was saved
+  $SOURCE_DIR = 'assayo';
+  $SOURCE_PATH = __DIR__ . DIRECTORY_SEPARATOR. '..';
+
+  // folder, when user run library
+  $DIST_DIR = 'assayo';
+  $DIST_PATH = getcwd();
+
+  // 1. Copy folder ./assayo from package to ./assayo in project
+  $source = realpath($SOURCE_PATH . DIRECTORY_SEPARATOR . $SOURCE_DIR);
+  $target = $DIST_PATH . DIRECTORY_SEPARATOR . $DIST_DIR;
+
+  $copyCommand = "cp -r $source $target";
+  exec($copyCommand, $output, $returnVar);
+  if ($returnVar !== 0) {
+    throw new Exception("Failed to copy directory. Command: $copyCommand");
+  }
+  logMessage('directory with HTML report was created');
+
+  // 2. Run "git log" and save output in file ./assayo/log.txt
+  logMessage('reading git log started');
+  $fileName = $DIST_PATH . DIRECTORY_SEPARATOR . $DIST_DIR . DIRECTORY_SEPARATOR . 'log.txt';
+  $logCommand = getSaveLogCommand($fileName);
+
+  exec($logCommand, $output, $returnVar);
+  if ($returnVar !== 0) {
+    throw new Exception("Failed to run git log. Command: $logCommand");
+  }
+  logMessage('the file with git log was saved');
+
+  // 3. Replace symbols in ./assayo/log.txt
+  $content = file_get_contents($fileName);
+  $content = preg_replace(['/\`/m', '/\n/m'], ['', '`);' . PHP_EOL . 'report.push(`'], $content);
+  file_put_contents($fileName, "report.push(`$content`);");
+
+} catch (Throwable $error) {
+  onFatalError($error);
+}
