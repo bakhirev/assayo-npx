@@ -38,20 +38,23 @@ function getSaveLogCommand(fileName) {
   process.on("unhandledRejection", onFatalError);
 
   const distDir = 'assayo';
-  const distPath = process.cwd();
+  const distPath = process.cwd(); // place, when user use library
 
-  const source = path.resolve(__dirname, 'build');
+  // 1. Copy folder ./assayo from package to ./assayo in project
+  const source = path.resolve(__dirname, 'assayo');
   const build = path.resolve(distPath, distDir);
   const copy = `cp -r ${source} ${build}`;
   await asyncExec(copy);
   log('directory with HTML report was be created');
 
+  // 2. Run "git log" and save output in file ./assayo/log.txt
   log('reading git log was be started');
   const fileName =  path.resolve('./', distDir, 'log.txt');
   const command = getSaveLogCommand(fileName);
   await asyncExec(command);
   log('the file with git log was be saved');
 
+  // 3. Replace symbols in ./assayo/log.txt
   const content = fs.readFileSync(fileName, "utf8")
     .replace(/`/gim, '')
     .replace(/\n/gim, '`);\nreport.push(`');
