@@ -37,19 +37,24 @@ function getSaveLogCommand(fileName) {
   process.on("uncaughtException", onFatalError);
   process.on("unhandledRejection", onFatalError);
 
-  const distDir = 'assayo';
-  const distPath = process.cwd(); // place, when user use library
+  // folder, when library was saved
+  const SOURCE_DIR = 'assayo';
+  const SOURCE_PATH = __dirname;
+
+  // folder, when user run library
+  const DIST_DIR = 'assayo';
+  const DIST_PATH = process.cwd();
 
   // 1. Copy folder ./assayo from package to ./assayo in project
-  const source = path.resolve(__dirname, 'assayo');
-  const target = path.resolve(distPath, distDir);
+  const source = path.resolve(SOURCE_PATH, SOURCE_DIR);
+  const target = path.resolve(DIST_PATH, DIST_DIR);
   const copy = `cp -r ${source} ${target}`;
   await asyncExec(copy);
   log('directory with HTML report was be created');
 
   // 2. Run "git log" and save output in file ./assayo/log.txt
   log('reading git log was be started');
-  const fileName =  path.resolve('./', distDir, 'log.txt');
+  const fileName =  path.resolve('./', DIST_DIR, 'log.txt');
   const command = getSaveLogCommand(fileName);
   await asyncExec(command);
   log('the file with git log was be saved');
