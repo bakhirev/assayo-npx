@@ -42,8 +42,8 @@ function getSaveLogCommand(fileName) {
 
   // 1. Copy folder ./assayo from package to ./assayo in project
   const source = path.resolve(__dirname, 'assayo');
-  const build = path.resolve(distPath, distDir);
-  const copy = `cp -r ${source} ${build}`;
+  const target = path.resolve(distPath, distDir);
+  const copy = `cp -r ${source} ${target}`;
   await asyncExec(copy);
   log('directory with HTML report was be created');
 
