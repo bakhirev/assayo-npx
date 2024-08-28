@@ -1,6 +1,7 @@
 {
   "name": "bakhirev/assayo",
   "type": "library",
+  "version": "v1.0.0",
   "description": "Visualization and analysis of git commit statistics. Team Lead performance tool.",
   "keywords": [
     "git",
