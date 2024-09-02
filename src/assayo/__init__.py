@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# __init__.py
 
 import os
 import sys
@@ -11,7 +11,7 @@ def getSaveLogCommand(fileName):
     raw = ''
   return 'git --no-pager log ' + raw + ' --oneline --all --reverse --date=iso-strict --pretty=format:"%ad>%aN>%aE>%s" > ' + fileName
 
-def runScript():
+def createHtmlReport():
   # folder, when library was saved
   SOURCE_DIR = 'assayo'
   SOURCE_PATH = os.path.dirname(__file__)
@@ -39,3 +39,6 @@ def runScript():
       f.seek(0)
       f.write(f'report.push(\`{content}\`);')
       f.truncate()
+
+if __name__ == "__main__":
+    createHtmlReport()
