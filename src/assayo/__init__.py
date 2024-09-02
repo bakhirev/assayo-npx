@@ -5,6 +5,10 @@ import sys
 import shutil
 from subprocess import check_output
 
+def showMessage(message):
+  if '--debug' in sys.argv:
+    print('Assayo: ' + message)
+
 def getSaveLogCommand(fileName):
   raw = '--raw --numstat'
   if '--no-file' in sys.argv:
@@ -24,14 +28,14 @@ def createHtmlReport():
   source = os.path.join(SOURCE_PATH, SOURCE_DIR)
   target = os.path.join(DIST_PATH, DIST_DIR)
   shutil.copytree(source, target)
-  print('directory with HTML report was be created')
+  showMessage('directory with HTML report was be created')
 
   # 2. Run 'git log' and save output in file ./assayo/log.txt
-  print('reading git log was be started')
+  showMessage('reading git log was be started')
   fileName = os.path.join(DIST_PATH, DIST_DIR, 'log.txt')
   command = getSaveLogCommand(fileName)
   check_output(command, shell=True)
-  print('the file with git log was be saved')
+  showMessage('the file with git log was be saved')
 
   # 3. Replace symbols in ./assayo/log.txt
   with open(fileName, 'r+') as f:
