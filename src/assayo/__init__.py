@@ -41,4 +41,4 @@ def createHtmlReport():
       f.truncate()
 
 if __name__ == "__main__":
-    createHtmlReport()
+  createHtmlReport()
