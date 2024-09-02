@@ -19,6 +19,11 @@ PHP:
 composer require bakhirev/assayo
 vendor/bin/assayo
 ```
+Python:
+```
+pipx assayo
+assayo
+```
 
 #### Параметры запуска
 
