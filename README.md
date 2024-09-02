@@ -61,4 +61,9 @@ npm run re-install
 ```
 npm publish
 ```
+##### Обновление пакета Python
+```
+py -m pip install --upgrade build
+py -m build
+```
 
