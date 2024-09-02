@@ -8,7 +8,7 @@ const path = require('node:path');
 
 const asyncExec = promisify(exec);
 
-const log = argv.includes('--debug')
+const showMessage = argv.includes('--debug')
   ? (m) => console.log(`Assayo: ${m}`)
   : () => {};
 
@@ -50,14 +50,14 @@ function getSaveLogCommand(fileName) {
   const target = path.resolve(DIST_PATH, DIST_DIR);
   const copy = `cp -r ${source} ${target}`;
   await asyncExec(copy);
-  log('directory with HTML report was be created');
+  showMessage('directory with HTML report was be created');
 
   // 2. Run "git log" and save output in file ./assayo/log.txt
-  log('reading git log was be started');
+  showMessage('reading git log was be started');
   const fileName =  path.resolve('./', DIST_DIR, 'log.txt');
   const command = getSaveLogCommand(fileName);
   await asyncExec(command);
-  log('the file with git log was be saved');
+  showMessage('the file with git log was be saved');
 
   // 3. Replace symbols in ./assayo/log.txt
   const content = fs.readFileSync(fileName, "utf8")
