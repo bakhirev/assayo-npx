@@ -2,7 +2,6 @@
 
 import os
 import sys
-import shutil
 from subprocess import check_output
 
 def showMessage(message):
@@ -27,7 +26,8 @@ def createHtmlReport():
   # 1. Copy folder ./assayo from package to ./assayo in project
   source = os.path.join(SOURCE_PATH, SOURCE_DIR)
   target = os.path.join(DIST_PATH, DIST_DIR)
-  shutil.copytree(source, target)
+  command = 'cp -r ' + source + ' ' + target
+  check_output(command, shell=True)
   showMessage('directory with HTML report was be created')
 
   # 2. Run 'git log' and save output in file ./assayo/log.txt
