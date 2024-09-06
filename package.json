@@ -1,14 +1,14 @@
 {
   "name": "assayo",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "re-install": "npm uninstall -g AssayoNpx && npm i -g"
   },
   "bin": {
-    "assayo": "bin/npx.js"
+    "assayo": "./index.js"
   },
   "description": "Visualization and analysis of git commit statistics. Team Lead performance tool.",
-  "main": "bin/npx.js",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bakhirev/assayo-npx.git"
