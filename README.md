@@ -80,8 +80,11 @@ py -m pip install --upgrade build
 ```
 py -m build
 ```
-Публикация (требует токен):
+Публикация (требует токен, может случайно отваливаться):
 ```
 py -m twine upload dist/*
 ```
-
+Проверка установки пакета:
+```
+C:\Users\admin\pipx\venvs
+```
