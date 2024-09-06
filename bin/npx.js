@@ -62,7 +62,7 @@ function getSaveLogCommand(fileName) {
   // 3. Replace symbols in ./assayo/log.txt
   const content = fs.readFileSync(fileName, "utf8")
     .replace(/`/gim, '')
-    .replace(/\n/gim, '`);\nreport.push(`');
-  fs.writeFileSync(fileName, `report.push(\`${content}\`);`);
+    .replace(/\n/gim, '`);\nreport.push(String.raw`');
+  fs.writeFileSync(fileName, `report.push(String.raw\`${content}\`);`);
 
 }()).catch(onFatalError);

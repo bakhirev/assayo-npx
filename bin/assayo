@@ -64,8 +64,8 @@ try {
 
   // 3. Replace symbols in ./assayo/log.txt
   $content = file_get_contents($fileName);
-  $content = preg_replace(['/\`/m', '/\n/m'], ['', '`);' . PHP_EOL . 'report.push(`'], $content);
-  file_put_contents($fileName, "report.push(`$content`);");
+  $content = preg_replace(['/\`/m', '/\n/m'], ['', '`);' . PHP_EOL . 'report.push(String.raw`'], $content);
+  file_put_contents($fileName, "report.push(String.raw`$content`);");
 
 } catch (Throwable $error) {
   onFatalError($error);
