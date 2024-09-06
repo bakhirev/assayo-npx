@@ -21,7 +21,7 @@ vendor/bin/assayo
 ```
 Python:
 ```
-pipx assayo
+pipx install assayo
 assayo
 ```
 
@@ -67,8 +67,21 @@ npm run re-install
 npm publish
 ```
 ##### Обновление пакета Python
+Скопировать API токены стендов внизу страницы:
+```
+https://test.pypi.org/manage/account/
+https://pypi.org/manage/account/
+```
+Устанавливаем пакеты для сборки:
 ```
 py -m pip install --upgrade build
+```
+Сборка:
+```
 py -m build
+```
+Публикация (требует токен):
+```
+py -m twine upload dist/*
 ```
 

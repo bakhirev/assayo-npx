@@ -12,6 +12,7 @@
 import ast
 import io
 import os
+from glob import glob
 from setuptools import find_packages, setup
 
 DEPENDENCIES = []
@@ -21,12 +22,9 @@ CURDIR = os.path.abspath(os.path.dirname(__file__))
 with io.open(os.path.join(CURDIR, "README.md"), "r", encoding="utf-8") as f:
     README = f.read()
 
-def get_version():
-    return "0.0.1"
-
 setup(
     name="assayo",
-    version=get_version(),
+    version="0.0.4",
     author="Aleksei Bakhirev",
     author_email="alexey-bakhirev@yandex.ru",
     description="",
@@ -37,9 +35,9 @@ setup(
     include_package_data=True,
     keywords=[],
     scripts=[],
-    entry_points={"console_scripts": ["assayo=assayo.main:main"]},
-    data_files=[],
+    entry_points={"console_scripts": ["assayo=bin.main:main"]},
     zip_safe=False,
+    package_data = {"assayo":["assayo/**/*"]},
     install_requires=DEPENDENCIES,
     python_requires=">=3.6",
     # license and classifier list:

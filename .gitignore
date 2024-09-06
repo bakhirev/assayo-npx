@@ -1,5 +1,6 @@
 # dependencies
 /node_modules
+/assayo.egg-info
 /.vscode
 /.pnp
 /.idea
