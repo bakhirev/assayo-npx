@@ -17,7 +17,7 @@ def getSaveLogCommand(fileName):
 
 def createHtmlReport():
   # folder, when library was saved
-  SOURCE_DIR = 'assayo'
+  SOURCE_DIR = '../assayo'
   SOURCE_PATH = os.path.dirname(__file__)
 
   # folder, when user run library
@@ -40,9 +40,9 @@ def createHtmlReport():
 
   # 3. Replace symbols in ./assayo/log.txt
   with open(fileName, 'r+') as f:
-      content = f.read().replace('`', '').replace('\n', '`);\nreport.push(String.raw`')
+      content = f.read().replace('`', '').replace('\n', '`);\nr(f`')
       f.seek(0)
-      f.write(f'report.push(String.raw\`{content}\`);')
+      f.write('r(f`' + content + '`);')
       f.truncate()
 
 def main():
