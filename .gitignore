@@ -3,6 +3,7 @@
 /.vscode
 /.pnp
 /.idea
+/.dist
 
 npm-debug.log*
 yarn-debug.log*
