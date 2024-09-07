@@ -73,6 +73,13 @@ npm run re-install
 npm publish
 ```
 
+### PHP
+
+Нажать кнопку "update"
+```
+https://packagist.org/packages/bakhirev/assayo
+```
+
 ### Python
 
 Скопировать API токены стендов внизу страницы:
