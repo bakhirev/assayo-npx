@@ -1,6 +1,6 @@
 {
   "name": "assayo",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "re-install": "npm uninstall -g AssayoNpx && npm i -g"
   },
@@ -11,7 +11,7 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bakhirev/assayo-npx.git"
+    "url": "https://github.com/bakhirev/assayo-npx.git"
   },
   "keywords": [
     "git",

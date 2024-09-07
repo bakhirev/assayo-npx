@@ -6,7 +6,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="assayo",
-    version="0.0.9",
+    version="0.0.10",
     author="Aleksei Bakhirev",
     author_email="alexey-bakhirev@yandex.ru",
     description="Visualization and analysis of git commit statistics. Team Lead performance tool.",
