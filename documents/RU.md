@@ -1,6 +1,6 @@
 # [Assayo NPX](https://assayo.online/?ref=github-npx)
 
-> [English](https://github.com/bakhirev/assayo-npx) | __[Русский](https://github.com/bakhirev/assayo/blob/main/documents/RU.md)__
+> [English](https://github.com/bakhirev/assayo-npx) | __[Русский](https://github.com/bakhirev/assayo-npx/blob/main/documents/RU.md)__
 
 Визуализация и анализ истории коммитов в git.
 

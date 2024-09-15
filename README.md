@@ -1,6 +1,6 @@
 # [Assayo NPX](https://assayo.online/?ref=github-npx)
 
-> __[English](https://github.com/bakhirev/assayo-npx)__ | [Русский](https://github.com/bakhirev/assayo/blob/main/documents/RU.md)
+> __[English](https://github.com/bakhirev/assayo-npx)__ | [Русский](https://github.com/bakhirev/assayo-npx/blob/main/documents/RU.md)
 
 Visualization and analysis of git commit statistics. Performance tool for Team Lead and IT-audit
 
