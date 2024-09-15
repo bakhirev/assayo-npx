@@ -35,7 +35,7 @@ assayo
 | `--debug`   | show information about work                      |
 
 ### The result of the work
-Package create folder ```./assayo``` with HTML-report about repository:
+The script will create a folder ```./assayo``` with a HTML-report about repository:
 
 ```
 ./assayo/index.html - report
