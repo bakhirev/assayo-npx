@@ -2,8 +2,6 @@
 
 > __[English](https://github.com/bakhirev/assayo-npx)__ | [Русский](https://github.com/bakhirev/assayo/blob/main/documents/RU.md)
 
-> The [main documentation](https://github.com/bakhirev/assayo/blob/main/documents/RU.md) is in russian. This is a translation. It may contain errors. If you a native speaker, you can help improve this translation. Thanks!
-
 Visualization and analysis of git commit statistics. Performance tool for Team Lead and IT-audit
 
 **Links:** [demo](https://assayo.online/demo/?ref=github&lang=en&dump=./test.txt), [online version](https://assayo.online/demo/?ref=github), [docker](https://hub.docker.com/r/bakhirev/assayo), [reddit](https://www.reddit.com/r/ITManagers/comments/1e5k291/the_visualization_and_analysis_of_git_commit/), [habr](https://habr.com/ru/articles/763342/), [video](https://www.youtube.com/watch?v=mqfu-ea3jao).
