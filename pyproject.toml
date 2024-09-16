@@ -1,0 +1,24 @@
+[project]
+name = "assayo"
+version = "0.0.10"
+description = "Visualization and analysis of git commit statistics. Team Lead performance tool."
+license = {text = "GPL-3.0"}
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["git","stat","statistic","statistics","log","report","audit","data-visualization","commit","commits","achivments"]
+authors = [{name = "Aleksei Bakhirev", email = "alexey-bakhirev@yandex.ru"}]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.scripts]
+assayo = "bin.__main__:main"
+
+[project.urls]
+"Source" = "https://github.com/bakhirev/assayo"
+"Tracker" = "https://github.com/bakhirev/assayo/issues"
