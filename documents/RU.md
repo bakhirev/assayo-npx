@@ -90,14 +90,17 @@ https://packagist.org/packages/bakhirev/assayo
 https://test.pypi.org/manage/account/
 https://pypi.org/manage/account/
 ```
+
 Устанавливаем пакеты для сборки:
 ```
 py -m pip install --upgrade build
 ```
+
 Сборка:
 ```
 py -m build
 ```
+
 Публикация:
 1. **работает только из командной строки Windows**;
 2. требует токен;
@@ -107,10 +110,14 @@ py -m build
 ```
 py -m twine upload dist/*
 ```
+
 Проверка установки пакета:
 ```
 C:\Users\admin\pipx\venvs
+pipx uninstall assayo
 ```
+
+Проверить описание пакета [тут](https://pypi.org/project/assayo/)
 
 ### Ruby
 
@@ -119,8 +126,14 @@ C:\Users\admin\pipx\venvs
 3. Отправить пакет: `gem push assayo-0.0.1.gem`
 
 Допускаются названия файлов только на английском. Иначе сборка падает.
+Проверка установки пакета:
 
-Проверить описание пакета:
 ```
-https://rubygems.org/gems/assayo
+gem install assayo
+gem uninstall assayo
 ```
+
+Проверить описание пакета [тут](https://rubygems.org/gems/assayo)
+
+При запуске может быть ошибка пути (No such file or directory, если Ruby установлен НЕ в папку по умолчанию.
+
