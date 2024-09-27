@@ -3,13 +3,18 @@
 
 import ast
 from setuptools import find_packages, setup
+from pathlib import Path
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text()
 
 setup(
     name="assayo",
-    version="0.0.10",
+    version="0.0.11",
     author="Aleksei Bakhirev",
     author_email="alexey-bakhirev@yandex.ru",
     description="Visualization and analysis of git commit statistics. Team Lead performance tool.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/bakhirev/assayo-npx",
     packages=["bin", "assayo"],
     package_dir={
