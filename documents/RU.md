@@ -114,15 +114,13 @@ C:\Users\admin\pipx\venvs
 
 ### Ruby
 
-Собрать пакет:
-
-```
-gem build assayo.gemspec
-```
+1. Очистить кеш: `gem pristine --all`
+2. Собрать пакет: `gem build assayo.gemspec`
+3. Отправить пакет: `gem push assayo-0.0.1.gem`
 
 Допускаются названия файлов только на английском. Иначе сборка падает.
 
-Отправить его в репозиторий:
+Проверить описание пакета:
 ```
-gem push assayo-0.0.1.gem
+https://rubygems.org/gems/assayo
 ```

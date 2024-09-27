@@ -1,18 +1,18 @@
 # coding: utf-8
-lib = File.expand_path('./assayo', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
 Gem::Specification.new do |s|
   s.name        = "assayo"
-  s.version     = "0.0.1"
+  s.version     = "0.0.2"
   s.summary     = "Assayo"
   s.description = "Visualization and analysis of git commit statistics. Team Lead performance tool."
   s.authors     = ["Aleksei Bakhirev"]
   s.email       = "alexey-bakhirev@yandex.ru"
-  #s.files       = ["bin/assayo.rb"]
-  s.files       = `git ls-files`.split($/).reject{|x| x.start_with?("assayo")}
+  s.files       = Dir["{assayo}/**/*"] + ["bin/assayo.rb", "README.md"]
   s.require_paths = ["assayo"]
   s.executables << "assayo"
   s.homepage    = "https://github.com/bakhirev/assayo"
   s.license     = "MIT"
+  s.metadata    = {
+    "homepage_uri" => "https://github.com/bakhirev/assayo",
+	"source_code_uri" => "https://github.com/bakhirev/assayo"
+  }
 end
