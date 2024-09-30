@@ -26,6 +26,11 @@ Python:
 pipx install assayo
 assayo
 ```
+Ruby:
+```
+gem install assayo
+assayo
+```
 
 #### Параметры запуска
 
