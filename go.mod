@@ -1,1 +1,3 @@
-module github.com/bakhirev/assayo-npx
+module assayo
+
+go 1.23.1
