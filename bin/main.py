@@ -40,7 +40,7 @@ def createHtmlReport():
 
   # 3. Replace symbols in ./assayo/log.txt
   with open(fileName, 'r+') as f:
-      content = f.read().replace('`', '')
+      content = f.read().replace('`', '').replace('$', '')
       f.seek(0)
       f.write('R(f`' + content + '`);')
       f.truncate()
