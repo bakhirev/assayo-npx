@@ -54,6 +54,7 @@ def create_report()
   # 3. Replace symbols in ./assayo/log.txt
   $content = IO.read($fileName)
   $content = $content.gsub(/`/, "")
+  $content = $content.gsub(/\$/, "")
   write_in_file($fileName, "R(f\`#{$content}\`);")
 end
 
