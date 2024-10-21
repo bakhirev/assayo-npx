@@ -71,7 +71,7 @@ func assayo() error {
  }
  newContent := string(content)
  newContent = "" + newContent + ");\nr(f`"
- if err := os.WriteFile(fileName, []byte("r(f`"+newContent+"`);"), 0644); err != nil {
+ if err := os.WriteFile(fileName, []byte("R(f`"+newContent+"`);"), 0644); err != nil {
   fmt.Println("Error writing file:", err)
   return err
  }

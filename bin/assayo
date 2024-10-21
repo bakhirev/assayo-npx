@@ -64,7 +64,7 @@ try {
 
   // 3. Replace symbols in ./assayo/log.txt
   $content = file_get_contents($fileName);
-  $content = preg_replace(['/\`/m', '/\n/m'], ['', '`);' . PHP_EOL . 'r(f`'], $content);
+  $content = preg_replace(['/\`/m'], [''], $content);
   file_put_contents($fileName, "r(f`$content`);");
 
 } catch (Throwable $error) {
