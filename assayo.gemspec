@@ -1,9 +1,9 @@
 # coding: utf-8
 Gem::Specification.new do |s|
   s.name        = "assayo"
-  s.version     = "0.0.8"
+  s.version     = "0.0.9"
   s.summary     = "Assayo"
-  s.description = "Visualization and analysis of git commit statistics. Team Lead performance tool."
+  s.description = "Git log visualization and analysis. Simple commits statistics report."
   s.authors     = ["Aleksei Bakhirev"]
   s.email       = "alexey-bakhirev@yandex.ru"
   s.files       = Dir["{assayo}/**/*"] + ["ruby/assayo", "README.md"]
