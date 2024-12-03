@@ -1,7 +1,7 @@
 # coding: utf-8
 Gem::Specification.new do |s|
   s.name        = "assayo"
-  s.version     = "0.0.9"
+  s.version     = "0.0.10"
   s.summary     = "Assayo"
   s.description = "Git log visualization and analysis. Simple commits statistics report."
   s.authors     = ["Aleksei Bakhirev"]

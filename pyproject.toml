@@ -1,6 +1,6 @@
 [project]
 name = "assayo"
-version = "0.0.16"
+version = "0.0.17"
 description = "Git log visualization and analysis. Simple commits statistics report."
 license = {text = "GPL-3.0"}
 readme = "README.md"
