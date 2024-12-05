@@ -1,9 +1,9 @@
 # coding: utf-8
 Gem::Specification.new do |s|
   s.name        = "assayo"
-  s.version     = "0.0.10"
-  s.summary     = "Assayo"
-  s.description = "Git log visualization and analysis. Simple commits statistics report."
+  s.version     = "0.0.11"
+  s.summary     = "Git log stat report"
+  s.description = "Visualization and analysis you git log. Creates HTML report about commits statistics, employees and company. Also it parse git log and give a achievements based on git stat. In addition the typical git stats, this package can show statistics by departments, tasks or determine the location of users. It quickly parses large git log files."
   s.authors     = ["Aleksei Bakhirev"]
   s.email       = "alexey-bakhirev@yandex.ru"
   s.files       = Dir["{assayo}/**/*"] + ["ruby/assayo", "README.md"]

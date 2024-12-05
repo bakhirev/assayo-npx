@@ -1,19 +1,31 @@
 [project]
 name = "assayo"
-version = "0.0.17"
-description = "Git log visualization and analysis. Simple commits statistics report."
+version = "0.0.18"
+description = "Visualization and analysis you git log. Creates HTML report about commits statistics. In addition the typical git stats, this package can show statistics by departments, tasks or determine the location of users."
 license = {text = "GPL-3.0"}
 readme = "README.md"
 requires-python = ">=3.8"
-keywords = ["git","stat","statistic","statistics","log","report","audit","data-visualization","commit","commits","achivments"]
+keywords = ["git", "log", "stat", "report", "commit", "github", "audit", "statistics", "data-visualization"]
 authors = [{name = "Aleksei Bakhirev", email = "alexey-bakhirev@yandex.ru"}]
 classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Natural Language :: Chinese (Simplified)",
+    "Natural Language :: English",
+    "Natural Language :: German",
+    "Natural Language :: Japanese",
+    "Natural Language :: Korean",
+    "Natural Language :: Portuguese",
+    "Natural Language :: Russian",
+    "Natural Language :: Spanish",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
+    "Environment :: Web Environment",
+    "Programming Language :: JavaScript",
+    "Programming Language :: Python",
 ]
 
 [project.scripts]
